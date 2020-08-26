@@ -1,0 +1,78 @@
+{
+  "mockedData": {
+    "dataByCompany": [
+      {
+        "Customer name": "Ford Motor Company",
+        "Date of sale": "01/01/20",
+        "Product": "airSlate",
+        "Seats": "7",
+        "Per seat": "$20",
+        "Revenue": "$140",
+        "Comissions": "20%",
+        "Total per sale": "$7",
+        "bulletColor": "#2192ef"
+      },
+      {
+        "Customer name": "Ford Motor Company",
+        "Date of sale": "01/01/20",
+        "Product": "airSlate",
+        "Seats": "4",
+        "Per seat": "$15",
+        "Revenue": "$40",
+        "Comissions": "20%",
+        "Total per sale": "$6",
+        "bulletColor": "#e15554"
+      },
+      {
+        "Customer name": "Mazda Motor Corporation",
+        "Date of sale": "01/01/20",
+        "Product": "pdfFiller",
+        "Seats": "3",
+        "Per seat": "$10",
+        "Revenue": "$30",
+        "Comissions": "20%",
+        "Total per sale": "$1",
+        "bulletColor": "#3bb273"
+      },
+      {
+        "Customer name": "Tesla",
+        "Date of sale": "01/03/20",
+        "Product": "signNow",
+        "Seats": "5",
+        "Per seat": "$40",
+        "Revenue": "$20",
+        "Comissions": "20%",
+        "Total per sale": "$20",
+        "bulletColor": "#ff5722"
+      },
+      {
+        "Customer name": "Nasa",
+        "Date of sale": "01/02/20",
+        "Product": "pdfFiller",
+        "Seats": "3",
+        "Per seat": "$10",
+        "Revenue": "$30",
+        "Comissions": "20%",
+        "Total per sale": "$1",
+        "bulletColor": "#6b6b6b"
+      },
+      {
+        "Customer name": "IBM Corporation",
+        "Date of sale": "01/03/20",
+        "Product": "signNow",
+        "Seats": "5",
+        "Per seat": "$40",
+        "Revenue": "$20",
+        "Comissions": "20%",
+        "Total per sale": "$20",
+        "bulletColor": "#45688f"
+      }
+    ],
+    "summaryData": {
+      "Total by month": "$55",
+      "Carryover": "$22",
+      "State tax 8.25%": "$12",
+      "GRAND TOTAL": "$73.45"
+    }
+  }
+}

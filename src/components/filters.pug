@@ -1,0 +1,19 @@
+div.filters
+  div.filters__section
+    div.calendar-selector
+      button.calendar-selector__prev(name='prev month')
+        svg.calendar-selector__prev-icon
+          title arrow left
+          use(xlink:href='#select-left')
+      button.calendar-selector__toggle-calendar(name='toggle calendar')
+        svg.calendar-selector__calendar-icon
+          title calendar icon
+          use(xlink:href='#calendar')
+        span.calendar-selector__selected September, 2020
+      button.calendar-selector__next(name='next month')
+        svg.calendar-selector__next-icon
+          title arrow right
+          use(xlink:href='#select-right')
+    div.filters__active-filter This month
+  div.filters__section
+    input.searchbar(placeholder='Search for customer')

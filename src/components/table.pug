@@ -1,0 +1,58 @@
+- const tableData = mockedData;
+  mixin table(tableId, data, sortedTdId)
+      - const tableColumns = Object.keys(data.dataByCompany[1]).filter(item => item != 'bulletColor');
+      - const summaryKeys = Object.keys(data.summaryData);
+      - const makeClassName = (prefix, key) => prefix + key.replace(/ /g,'-').toLowerCase();
+      table(class=tableId)
+        thead
+          tr
+            for key in tableColumns
+              th.table__header(class=`${makeClassName('table__header--', key)} ${key === sortedTdId ? 'active' : null}`)
+                =key
+                svg.table__sorting-icon
+                      title sorting arrow
+                      use(xlink:href='#down')
+        tbody
+          for companyData in data.dataByCompany
+            tr
+              for key in tableColumns
+                unless key === 'Customer name'
+                  td.table__td(class=`${makeClassName('table__td--', key)} ${key === sortedTdId ? 'active' : null}`)= companyData[key]
+                else
+                  td.table__td(class=makeClassName('table__td--', key))
+                    span.table__bullet(style='background-color:' + companyData.bulletColor)
+                    span= companyData[key]
+          for key in summaryKeys
+            tr
+              td.table__td.table__td--invisible(colspan=tableColumns.length - 2)
+              td.table__td.table__td--summary(colspan=2)
+                div.table__summary-line
+                  span.table__summary-label= key
+                  span.table__summary-value= data.summaryData[key]
+        tfooter
+          tr
+            td(colspan=tableColumns.length)
+              div.table__footer
+                div.table__footer-section
+                  div.table__footer-msg
+                    span.table__footer-msg-label Payment:
+                    svg.table__footer-msg-stripe-icon
+                      title stripe card icon
+                      use(xlink:href='#card-stripe')
+                  div.table__footer-msg
+                    span.table__footer-msg-label Status:
+                    span Future
+                    span.notification-icon
+                      svg.notification-icon__img
+                        title stripe card icon
+                        use(xlink:href='#info_small')
+                      div.notification-icon__msg You will receive the payment within 60 days from the moment the customer paid for the service. You need to accumulate at least $100 to got paid.
+                button.button.button--download
+                  svg.button__icon
+                    title download icon
+                    use(xlink:href='#download')
+                  | Download report
+
+
++table('table', tableData, 'Seats')
+

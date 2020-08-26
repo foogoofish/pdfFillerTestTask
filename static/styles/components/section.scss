@@ -1,0 +1,20 @@
+.section {
+  font-size: $font-size-default;
+  color: $font-color-default;
+  &:not(:first-child) {
+    margin-top: 32px;
+  }
+  &__header {
+    margin-bottom: 31px;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  &__subtitle {
+    font-size: $font-size-default;
+    font-weight: normal;
+    color: #767676;
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,18 @@
+header.header
+  div.header__block
+    img(src='./static/images/logo.svg' alt='airSlate logo')
+  div.header__block
+    nav.menu
+      a.menu__item Dashboard
+      a.menu__item.menu__item--active Payments
+      a.menu__item History
+      a.menu__item Documents
+      a.menu__item FAQ
+      a.menu__item About
+      a.menu__item Contact Us
+      button.menu__item.menu__item--user-menu(name='User menu')
+        // .jpg is used here due to Zeplin bug - svg is not available
+        img.menu__user-icon(src='./static/images/user.jpg')
+        svg.menu__expand-user-menu-icon
+          title Expand menu icon
+          use(xlink:href='#select-down')

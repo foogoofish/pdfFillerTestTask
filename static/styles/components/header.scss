@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: $header-height;
+  background: $header-bg;
+  box-shadow: 0 1px 0 0 $divider;
+  padding: 0 24px;
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+}

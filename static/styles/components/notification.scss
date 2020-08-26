@@ -1,0 +1,37 @@
+.notification {
+  position: relative;
+  background-color: #ddeefc;
+  border-radius: 4px;
+  color: $font-color-default;
+  font-size: $font-size-default;
+  line-height: 24px;
+  padding: 16px 34px 20px 64px;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+  }
+  &__list {
+    list-style-position: inside;
+    list-style-type: "\2022\02002";
+  }
+  strong {
+    font-weight: 600;
+  }
+  &__close-btn {
+    @include reset-button;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+  }
+  &__close-btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

@@ -1,0 +1,18 @@
+.button {
+  @include reset-button;
+  width: 152px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
+  background-color: $active-item-color;
+  color: $button-color;
+  font-size: $font-size-small;
+  letter-spacing: 0.3px;
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    position: relative;
+    bottom: -3px;
+  }
+}

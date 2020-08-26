@@ -1,0 +1,166 @@
+.table {
+  width: 100%;
+  background: $white-bg;
+  border: 1px solid $border-default;
+  border-radius: 4px;
+  border-spacing: 0;
+  &__header {
+    position: relative;
+    background-color: $table-header;
+    color: $font-color-default;
+    font-size: $font-size-small;
+    font-weight: bold;
+    text-align: left;
+    height: 32px;
+    padding: 0 24px 0 8px;
+    vertical-align: middle;
+    border-bottom: 1px solid $border-default;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &.active, &:hover {
+      background-color: #f3f3f3;
+    }
+    &.active {
+      .table__sorting-icon {
+        opacity: 1;
+      }
+    }
+    &:first-child {
+      border-radius: 4px 0 0 0;
+      padding-left: 24px;
+    }
+    &:last-child {
+      border-radius: 0 4px 0 0;
+      padding-right: 24px;
+    }
+    &--seats, &--per-seat, &--revenue, &--comissions, &--total-per-sale {
+      text-align: right;
+    }
+  }
+  &__td {
+    font-size: $font-size-default;
+    color: $font-color-default;
+    border-bottom: 1px solid $divider;
+    height: 52px;
+    padding: 0 24px 0 8px;
+    vertical-align: middle;
+    &.active {
+      background-color: #f7f8fa;
+    }
+    &:first-child {
+      position: relative;
+      padding-left: 16px;
+      white-space: nowrap;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:before {
+        content: "";
+        display: block;
+        width: 16px;
+        position: absolute;
+        top: 0;
+        bottom: -1px;
+        left: 0;
+        background: $white-bg;
+      }
+    }
+    &:last-child {
+      position: relative;
+      padding-right: 24px;
+      &:before {
+        content: "";
+        display: block;
+        width: 16px;
+        position: absolute;
+        top: 0;
+        bottom: -1px;
+        right: 0;
+        background: $white-bg;
+      }
+    }
+    &--invisible {
+      border: none;
+      height: 32px;
+    }
+    &--seats, &--per-seat, &--revenue, &--comissions, &--total-per-sale {
+      text-align: right;
+    }
+    &--summary {
+      height: 32px;
+    }
+  }
+  tr:last-child {
+    .table__td {
+      border-bottom: none;
+      &:first-child {
+        border-radius: 0 0 0 4px;
+        &:before {
+          content: none;
+        }
+      }
+      &:last-child {
+        border-radius: 0 0 4px 0;
+        &:before {
+          content: none;
+        }
+      }
+    }
+    .table__summary-label, .table__summary-value {
+      font-weight: bold;
+    }
+  }
+  &__summary-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__summary-value {
+    font-weight: 600;
+  }
+  &__bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 8px 0 7px;
+  }
+  &__sorting-icon {
+    opacity: 0;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    transition: opacity 0.2s;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    background-color: $body-bg;
+    border-top: 1px solid $border-default;
+    border-radius: 0 0 4px 4px;
+    padding: 0 24px;
+  }
+  &__footer-section {
+    display: flex;
+    align-items: center;
+  }
+  &__footer-msg {
+    display: flex;
+    align-items: center;
+    &:not(:first-child) {
+      margin-left: 24px;
+    }
+  }
+  &__footer-msg-label {
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  &__footer-msg-stripe-icon {
+    height: 48px;
+    width: 48px;
+  }
+}

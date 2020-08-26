@@ -1,0 +1,11 @@
+include ./components/header.pug
+main.content
+  include ./components/notification.pug
+  div.section
+    div.section__header
+      h2.section__title My Commissions & Payments
+      h3.section__subtitle Your current commission structure is:
+    include ./components/tiles.pug
+    include ./components/filters.pug
+    include ./components/table.pug
+include ./components/footer.pug

@@ -1,0 +1,34 @@
+.menu {
+  display: flex;
+  align-self: stretch;
+  &__item {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    color: $menu-color;
+    font-size: $font-size-default;
+    font-weight: 600;
+    margin-right: 32px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    &--active {
+      color: $active-item-color;
+      border-bottom: 2px solid $active-item-color;
+    }
+    &--user-menu {
+      @include reset-button;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__user-icon {
+    width: 32px;
+    height: 32px;
+  }
+  &__expand-user-menu-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

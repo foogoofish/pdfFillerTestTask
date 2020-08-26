@@ -1,0 +1,14 @@
+div.notification
+  svg.notification__icon
+    title Info icon
+    use(xlink:href='#info')
+  button.notification__close-btn(name='Close notification')
+    svg.notification__close-btn-icon
+      title Close button icon
+      use(xlink:href='#close-small')
+  div
+    | Important information about your account:
+    ul.notification__list
+      li The first payment you will receive within <strong>60 days</strong> from the moment the customer paid for the service.
+      li If the payment is less than <strong>$100</strong> we will accumulate the money and add it whenever the amount exeeds.
+      li As a resident of US Arizona state you will have to pay <strong>8.25%</strong> taxes.
